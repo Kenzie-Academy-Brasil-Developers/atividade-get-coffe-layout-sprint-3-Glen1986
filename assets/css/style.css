@@ -27,7 +27,13 @@ font-family: 'Nunito', sans-serif;
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');/* FONTS​ */
 
 /* VARIÁVEIS */
-:root{}
+:root{
+    --larguraContainerConteudo:1140px;
+    --coresTexto: #242424; 
+    --coresSecundaria: #FCA60F;
+    --fontSizePrimaria: 18px;
+    --fontSizeSecundaria: 36px;
+}
 /* VARIÁVEIS */
   
   
@@ -47,14 +53,48 @@ html{}
 /* HTML */
   
 /* BODY */
-body{}
+body{
+}
 /* BODY */
   
 
 /* HEADER */
-header{}
+header{
+     box-shadow: 0px 1px 8px rgba(36, 36, 36, 0.15);
+}
+          header .container-flex{
+         display:flex;
+         flex-direction:column;
+         text-align:center;
+         justify-content:space-between;
+         padding-top:1.5rem;
+     }  
+
+             a.page_header_logo img{
+                 width:2.45rem;
+                 margin-left:-7rem;
+             }
+             a.page_header_logo figcaption{
+                 position: relative;
+                 left: 0.5rem;
+                 bottom: 1.8rem;
+                 text-transform: lowercase;
+                 color:var(--coresTexto);
+             }
+             .col-flex-md-6 .page_header_menu ul{
+                 display: flex;
+                 padding:0 3rem 1rem 3rem;
+         }
+     .page_header_menu ul li{
+         margin:0 auto;;
+     }
+         ul li a{
+             color:var(--coresTexto);
+
+         }
+
+
 /* HEADER */
-  
 
 /* FOOTER */
 footer{}
@@ -62,7 +102,63 @@ footer{}
 
   
 /* INICIAL */
-main{}
+main{
+    background-image:url(../img/Vector-left.svg);
+    padding: 0 4rem;
+    }
+    .page_home_contant{
+        display:flex;
+        flex-direction: column;
+        text-align:center;
+
+    }
+     .page_home_contant .container h2{
+         flex-direction:column;
+         margin-bottom:4rem;
+     }
+     .page_home_contant_copo img{
+         display:none;
+     }
+     .large-container .page_home_contant .container{
+         margin-top:10rem;
+     }
+      .container h2{
+             font-size:var( --fontSizeSecundaria);
+             font-family:'montserrat';
+             font-weight:500;
+             margin-bottom:4rem;
+         }
+         .container button{
+             background-color:rgb(237, 181, 40);
+             color:white;
+             font-family: 'Nunito', sans-serif ;
+             font-size:18px;
+             font-weight:bold;
+             width:15rem;
+             height:3rem;
+             border-radius:0.65rem;
+             border:none;
+             margin-bottom:20rem;
+         }
+
+         .container .page_home_list_social li a {
+             display: none;
+         }
+         .page_home_list_social{
+             display: flex;
+             flex-direction:row;
+             text-align:center;
+             justify-content:space-around;
+             padding:0 30%;
+         }
+             .container .page_home_list_social i.fab.fa-facebook-square, .fa-instagram-square, .fa-twitter-square{
+                color:rgb(237, 181, 40);
+             }
+.scrollDown{
+     display:none;
+ }
+
+
 
 main>a{
     font-style: normal;
@@ -121,5 +217,96 @@ main>a{
 /* MEDIA QUERIES */
 @media screen and (min-width: 400px){}
 
-@media screen and (min-width: 800px){}
+@media screen and (min-width: 800px){
+    header{
+    padding:0 6rem;
+    }
+/* HEADER */
+     header .container-flex{
+         display:flex;
+         flex-direction:row;
+         justify-content:space-between;
+         padding-top:1.5rem;
+     }  
+         .container .col-flex-md-6 a.page_header_logo{
+             display: inline-block;
+         }
+             a.page_header_logo img{
+                 width:2.45rem;
+             }
+             a.page_header_logo figcaption{
+                 position: relative;
+                 left: 3rem;
+                 bottom: 1.8rem;
+                 text-transform: lowercase;
+                 color:var(--coresTexto);
+             }
+     .col-flex-md-6 .page_header_menu ul{
+         display: flex;
+     }
+         .page_header_menu ul li{
+             margin:0 2rem;
+         }
+             ul li a{
+                 color:var(--coresTexto);
+
+             }
+
+ main.large-container{
+     width:var( --larguraContainerConteudo);
+     position: absolute;
+ }
+     .page_home_contant{
+         padding:8rem 2rem 6rem 2rem;
+     }
+         .page_home_contant_copo{
+             position: relative;
+             left:50rem;
+
+         }
+            .page_home_contant_copo img{
+                width: 8rem
+            }
+     .large-container .container {
+         max-width:38rem;
+         margin-left:6rem;
+         position:relative;
+         top:-12rem;
+     }      
+         .page_home_contant_copo img{
+             display:flex;
+     }
+         .container h2{
+             font-size:var( --fontSizeSecundaria);
+             font-family:'montserrat';
+             font-weight:500;
+             margin-bottom:4rem;
+         }
+         .container button{
+             background-color:rgb(237, 181, 40);
+             color:white;
+             font-family: 'Nunito', sans-serif ;
+             font-size:18px;
+             font-weight:bold;
+             width:15rem;
+             height:3rem;
+             border-radius:0.65rem;
+             border:none;
+         }
+         .container .page_home_list_social li a {
+             display: none;
+         }
+         .container .page_home_list_social {
+             margin-top:1rem;
+             display: flex;
+             flex-direction:row;
+         }
+         .container .page_home_list_social i{
+             margin-right:1rem;
+         }
+         .container .page_home_list_social i.fab.fa-facebook-square, .fa-instagram-square, .fa-twitter-square{
+             color:rgb(237, 181, 40);
+   
+    }
+}
 /* MEDIA QUERIES */
